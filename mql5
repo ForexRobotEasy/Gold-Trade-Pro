@@ -1,0 +1,144 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                               Gold Trade Pro.mq5 |
+//|                    Copyright 2022, Forex Robot Easy Team          |
+//|                                             forexroboteasy.com   |
+//+------------------------------------------------------------------+
+
+// Define input parameters
+input double TakeProfit = 100; // Take Profit level in pips
+input double StopLoss = 50; // Stop Loss level in pips
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+void OnInit()
+{
+   // Add necessary initialization code here
+}
+
+//+------------------------------------------------------------------+
+//| Expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+   // Add necessary deinitialization code here
+}
+
+//+------------------------------------------------------------------+
+//| Expert start function                                            |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+   // Check for breakout of support or resistance levels
+   if (IsBreakoutSupportLevel())
+   {
+      OpenTrade(OP_BUY);
+   }
+   else if (IsBreakoutResistanceLevel())
+   {
+      OpenTrade(OP_SELL);
+   }
+}
+
+//+------------------------------------------------------------------+
+//| Function to check for breakout of support level                   |
+//+------------------------------------------------------------------+
+bool IsBreakoutSupportLevel()
+{
+   // Add code to identify and analyze daily support levels here
+   
+   // Check if breakout condition is met
+   if (/* Breakout condition */)
+   {
+      return true;
+   }
+   
+   return false;
+}
+
+//+------------------------------------------------------------------+
+//| Function to check for breakout of resistance level                |
+//+------------------------------------------------------------------+
+bool IsBreakoutResistanceLevel()
+{
+   // Add code to identify and analyze daily resistance levels here
+   
+   // Check if breakout condition is met
+   if (/* Breakout condition */)
+   {
+      return true;
+   }
+   
+   return false;
+}
+
+//+------------------------------------------------------------------+
+//| Function to open a trade                                          |
+//+------------------------------------------------------------------+
+void OpenTrade(const int tradeType)
+{
+   // Add code to open a trade here
+   
+   // Set Take Profit and Stop Loss levels
+   double takeProfitLevel = NormalizeDouble(SymbolInfoDouble(Symbol(), SYMBOL_ASK) + TakeProfit * Point, Digits);
+   double stopLossLevel = NormalizeDouble(SymbolInfoDouble(Symbol(), SYMBOL_ASK) - StopLoss * Point, Digits);
+   
+   // Place the trade order
+   if (tradeType == OP_BUY)
+   {
+      // Add code to buy the Gold trading pair
+   }
+   else if (tradeType == OP_SELL)
+   {
+      // Add code to sell the Gold trading pair
+   }
+}
+
+//+------------------------------------------------------------------+
+//| Function to close a trade                                         |
+//+------------------------------------------------------------------+
+void CloseTrade(const int ticket)
+{
+   // Add code to close a trade here
+}
+
+//+------------------------------------------------------------------+
+//| Function to handle volatile market conditions                     |
+//+------------------------------------------------------------------+
+void HandleVolatileMarketConditions()
+{
+   // Add code to handle volatile market conditions here
+}
+
+//+------------------------------------------------------------------+
+//| Function to display trade information and settings                |
+//+------------------------------------------------------------------+
+void DisplayTradeInformation()
+{
+   // Add code to display trade information and settings here
+}
+
+//+------------------------------------------------------------------+
+//| Function to test the code                                         |
+//+------------------------------------------------------------------+
+void TestCode()
+{
+   // Add code to test the code here
+}
+
+//+------------------------------------------------------------------+
+//| Function to optimize the code                                     |
+//+------------------------------------------------------------------+
+void OptimizeCode()
+{
+   // Add code to optimize the code here
+}
+
+//+------------------------------------------------------------------+
+//| Function to provide documentation                                 |
+//+------------------------------------------------------------------+
+void ProvideDocumentation()
+{
+   // Add code to provide documentation here
+}
